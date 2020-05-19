@@ -1,8 +1,0 @@
-node_modules/
-dist/
-pages/
-utils/
-app.js
-app.json
-app.wxss
-project.config.json
