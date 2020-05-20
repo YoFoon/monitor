@@ -97,6 +97,11 @@ monitor.extend({
   addLoadEvent: addLoadEvent,
 
   MAIN_DOMAIN: config.MAIN_DOMAIN,
+
+  // 获取当前url
+  defaultLocation: window.location.href.split('?')[0].replace('#', ''),
+  // onerror 错误监控启动状态
+  jsMonitorStarted: false,
 });
 
 if (typeof Symbol === 'function') {

@@ -34,6 +34,8 @@ export const RESOURCES = resources;
 export const DEVICE_INFO = getDevice();
 //获取用户信息
 export const USER_INFO = localStorage.wmUserInfo ? JSON.parse(localStorage.wmUserInfo) : {};
+// 获取当前页面的URL
+export const WEB_LOCATION = window.location.href;
 
 export const TYPE_LIST = [
   'ELE_BEHAVIOR',
