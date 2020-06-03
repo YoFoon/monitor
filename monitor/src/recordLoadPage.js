@@ -62,7 +62,7 @@ monitor.extend({
           loadPageInfo.handleLogInfo(LOAD_PAGE, loadPageInfo);
         }
         // 此方法有漏洞，暂时先注释掉
-        // performanceGetEntries();
+        // monitor.performanceGetEntries();
 
         // 页面加载完成后，检查是否需要录屏，因为这个时候userId才有可能被设置进来
         // checkTheVideo();

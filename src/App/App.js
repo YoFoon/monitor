@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import '../../monitor/src/index';
 class App extends Component {
-  // componentDidMount() {
-  //   var atag = document.createElement('script');
-  //   atag.type = 'text/javascript';
-  //   atag.async = true;
-  //   atag.src = 'http://www.hunliji.com/sf.js';
-  //   document.body.appendChild(atag);
-  // }
+  componentDidMount() {
+    var tag = document.createElement('script');
+    tag.type = 'text/javascript';
+    tag.async = true;
+    tag.src = 'http://www.hunliji.com/sf.js';
+    document.body.appendChild(tag);
+    console.error('console error');
+    console.log(aa);
+  }
   render() {
     return <div>1</div>;
   }
