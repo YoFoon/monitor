@@ -1,6 +1,6 @@
 import monitor from './core';
 import addOnclickForDocument from './utils/addOnclickForDocument';
-
+import BehaviorInfo from './modules/behaviorInfo';
 import { ELE_BEHAVIOR } from './var/constant';
 
 monitor.extend({
