@@ -1,13 +1,14 @@
 import monitor from './core';
-import HttpLogInfo from './modules/httpLogInfo';
-import { HTTP_LOG, HTTP_UPLOAD_LOG_API, HTTP_UPLOAD_DEBUG_LOG_API } from './var/constant';
+import addOnclickForDocument from './utils/addOnclickForDocument';
+
+import { ELE_BEHAVIOR } from './var/constant';
 
 monitor.extend({
   recordBehavior: function() {
     // 记录行为前，检查一下url记录是否变化
-    checkUrlChange();
+    monitor.checkUrlChange();
     // 记录用户点击元素的行为数据
-    utils.addOnclickForDocument(function(e) {
+    addOnclickForDocument(function(e) {
       var className = '';
       var placeholder = '';
       var inputValue = '';
