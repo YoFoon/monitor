@@ -1,6 +1,7 @@
 window.WEB_MONITOR_ID = '111';
 
 import monitor from './core';
+import './polyfill';
 import './common/index';
 /**
  * 用户加载页面信息监控
@@ -24,5 +25,11 @@ monitor.recordResourceError();
  */
 import './recordJavaScriptError';
 monitor.recordJavaScriptError();
+
+/**
+ * 页面接口请求监控
+ */
+import './recordHttpLog';
+monitor.recordHttpLog();
 
 export default monitor;

@@ -1,8 +1,8 @@
 //修复IE，增加方法getComputedStyle为对象的窗口和getPropertyValue方法的对象，它返回的getComputedStyle
 if (window && !window.getComputedStyle) {
-  window.getComputedStyle = function(el, pseudo) {
+  window.getComputedStyle = function (el, pseudo) {
     this.el = el;
-    this.getPropertyValue = function(prop) {
+    this.getPropertyValue = function (prop) {
       if (prop == 'float') prop = 'styleFloat';
       prop = camelCase(prop);
       return el.currentStyle[prop] || null;
@@ -12,7 +12,7 @@ if (window && !window.getComputedStyle) {
 }
 //IE浏览器对filter方法的支持
 if (!Array.prototype.filter) {
-  Array.prototype.filter = function(fun /*, thisArg */) {
+  Array.prototype.filter = function (fun /*, thisArg */) {
     'use strict';
     if (this === void 0 || this === null) throw new TypeError();
     var t = Object(this);
@@ -31,7 +31,7 @@ if (!Array.prototype.filter) {
 }
 //IE对indexOf方法的支持
 if (!Array.indexOf) {
-  Array.prototype.indexOf = function(obj) {
+  Array.prototype.indexOf = function (obj) {
     for (var i = 0; i < this.length; i++) {
       if (this[i] == obj) return i;
     }
@@ -40,7 +40,7 @@ if (!Array.indexOf) {
 }
 //IE对forEach方法的支持
 if (!Array.prototype.forEach) {
-  Array.prototype.forEach = function(fun /*, thisp*/) {
+  Array.prototype.forEach = function (fun /*, thisp*/) {
     var len = this.length;
     if (typeof fun != 'function') throw new TypeError();
     var thisp = arguments[1];
@@ -51,7 +51,7 @@ if (!Array.prototype.forEach) {
 }
 //删除数组 元素
 if (!Array.prototype.remove) {
-  Array.prototype.remove = function(val) {
+  Array.prototype.remove = function (val) {
     var index = this.indexOf(val);
     return index > -1 && this.splice(index, 1), this;
   };
@@ -60,7 +60,20 @@ if (!Array.prototype.remove) {
 // trim 对于原型没有，进行扩展
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 if (!String.prototype.trim) {
-  String.prototype.trim = function() {
+  String.prototype.trim = function () {
     return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
   };
+}
+
+if (! typeof window.CustomEvent === 'function') {
+  function CustomEvent(event, params) {
+    params = params || { bubbles: false, cancelable: false, detail: undefined }
+    var evt = document.createEvent('CustomEvent')
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail)
+    return evt
+  }
+
+  CustomEvent.prototype = window.Event.prototype
+
+  window.CustomEvent = CustomEvent
 }

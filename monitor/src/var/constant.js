@@ -24,6 +24,10 @@ export const VIDEOS_EVENT = 'VIDEOS_EVENT';
 export const BROWSER_INFO = window.navigator.userAgent;
 // 页面加载对象属性
 export const TIMING = performance && performance.timing;
+// 上传数据的接口API
+export const HTTP_UPLOAD_LOG_API = '/server/upLog'; // '/api/v1/upLog'
+// 上传debug数据的接口API
+export const HTTP_UPLOAD_DEBUG_LOG_API = '/server/upDLog';
 // 获取页面加载的具体属性
 let resources = null;
 if (performance && typeof performance.getEntries === 'function') {
