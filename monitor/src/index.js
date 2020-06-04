@@ -4,38 +4,42 @@ import monitor from './core';
 import './polyfill';
 import './common/index';
 /**
+ * 屏幕截图
+ */
+import './screenShot';
+/**
+ * 屏幕录制
+ */
+import './checkTheVideo';
+/**
  * 用户加载页面信息监控
  */
 import './recordLoadPage';
-monitor.recordLoadPage();
-
 /**
  * 用户访问记录监控
  */
 import './recordPV';
-monitor.customerPV();
-
 /**
  * 监控页面静态资源加载报错
  */
 import './recordResourceError';
-monitor.recordResourceError();
 /**
  * 页面JS错误监控
  */
 import './recordJavaScriptError';
-monitor.recordJavaScriptError();
-
 /**
  * 页面接口请求监控
  */
 import './recordHttpLog';
-monitor.recordHttpLog();
-
 /**
  * 用户行为记录监控
  */
 import './recordBehavior';
-monitor.recordBehavior();
+
+/**
+ * 初始化
+ */
+import './init';
+monitor.init();
 
 export default monitor;

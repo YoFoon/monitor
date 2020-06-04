@@ -102,6 +102,8 @@ monitor.extend({
   defaultLocation: window.location.href.split('?')[0].replace('#', ''),
   // onerror 错误监控启动状态
   jsMonitorStarted: false,
+  // 停止录屏的方法
+  stopTheVideo = null,
 });
 
 if (typeof Symbol === 'function') {

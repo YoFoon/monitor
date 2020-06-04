@@ -65,7 +65,7 @@ monitor.extend({
         // monitor.performanceGetEntries();
 
         // 页面加载完成后，检查是否需要录屏，因为这个时候userId才有可能被设置进来
-        // checkTheVideo();
+        monitor.checkTheVideo();
       }, 1000);
     });
   },
