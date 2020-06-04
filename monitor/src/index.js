@@ -32,4 +32,10 @@ monitor.recordJavaScriptError();
 import './recordHttpLog';
 monitor.recordHttpLog();
 
+/**
+ * 用户行为记录监控
+ */
+import './recordBehavior';
+monitor.recordBehavior();
+
 export default monitor;
