@@ -1,6 +1,7 @@
 import monitor from './core';
 import initDebugTool from './utils/initDebugTool';
 import { HTTP_PROJECT_INFO } from './var/constant';
+import ajax from './utils/ajax';
 
 monitor.extend({
   checkTheVideo: function() {
@@ -13,7 +14,7 @@ monitor.extend({
     if (!debugConnectStatus) {
       // 如果没有这个值，发送一条请求，确定连线状态, 并确定是否启动
       var wmUserInfo = localStorage.wmUserInfo ? JSON.parse(localStorage.wmUserInfo) : {};
-      utils.ajax(
+      ajax(
         'GET',
         HTTP_PROJECT_INFO + '?webMonitorId=' + WEB_MONITOR_ID + '&userId=' + wmUserInfo.userId,
         {},

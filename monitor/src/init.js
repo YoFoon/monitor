@@ -1,9 +1,10 @@
 import monitor from './core';
 import ajax from './utils/ajax';
+import { TYPE_LIST, HTTP_UPLOAD_LOG_INFO } from './var/constant';
 monitor.extend({
   init: function() {
     try {
-      monitor.recordPV();
+      monitor.customerPV();
       monitor.recordResourceError();
       monitor.recordJavaScriptError();
       monitor.recordHttpLog();
@@ -18,7 +19,7 @@ monitor.extend({
       var waitTimes = 0;
       var typeList = TYPE_LIST;
       setInterval(function() {
-        checkUrlChange();
+        monitor.checkUrlChange();
         // 进行一次上传
         if (timeCount >= 40) {
           // 如果是本地的localhost, 就忽略，不进行上传

@@ -1,6 +1,6 @@
 import getCookie from './getCookie';
 import getUuid from './getUuid';
-import monitor from '../index';
+import monitor from '../core';
 export default function() {
   var customerKey = getUuid();
   var monitorCustomerKey = getCookie('monitorCustomerKey');
