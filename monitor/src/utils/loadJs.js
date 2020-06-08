@@ -1,4 +1,4 @@
-export default loadJs = function(url, callback) {
+export default function(url, callback) {
   var script = document.createElement('script');
   script.async = 1;
   script.src = url;
@@ -6,4 +6,4 @@ export default loadJs = function(url, callback) {
   var dom = document.getElementsByTagName('script')[0];
   dom.parentNode.insertBefore(script, dom);
   return dom;
-};
+}

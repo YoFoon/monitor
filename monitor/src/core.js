@@ -103,7 +103,7 @@ monitor.extend({
   // onerror 错误监控启动状态
   jsMonitorStarted: false,
   // 停止录屏的方法
-  stopTheVideo = null,
+  stopTheVideo: null,
 });
 
 if (typeof Symbol === 'function') {

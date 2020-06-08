@@ -6,7 +6,7 @@
  * @param successCallback  成功回调方法
  * @param failCallback   失败回调方法
  */
-export default ajax = function(method, url, param, successCallback, failCallback) {
+export default function(method, url, param, successCallback, failCallback) {
   try {
     var xmlHttp = window.XMLHttpRequest
       ? new XMLHttpRequest()
@@ -32,4 +32,4 @@ export default ajax = function(method, url, param, successCallback, failCallback
   } catch (e) {
     console.warn(e);
   }
-};
+}

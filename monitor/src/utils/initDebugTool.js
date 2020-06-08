@@ -4,7 +4,7 @@ import loadJs from './loadJs';
 import monitor from '../core';
 import ajax from './ajax';
 
-export default initDebugTool = function() {
+export default function() {
   var wmUserInfo = localStorage.wmUserInfo ? JSON.parse(localStorage.wmUserInfo) : {};
   // 获取浏览器本地缓存（localStorage）信息
   var localInfo = {};
@@ -88,4 +88,4 @@ export default initDebugTool = function() {
       });
     });
   });
-};
+}

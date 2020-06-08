@@ -1,4 +1,4 @@
-export default addOnclickForDocument = function(func) {
+export default function(func) {
   var oldOnclick = document.onclick; //把现在有document.onclick事件处理函数的值存入变量oldOnclick。
   if (typeof document.onclick != 'function') {
     //如果这个处理函数还没有绑定任何函数，就像平时那样把新函数添加给它
@@ -10,4 +10,4 @@ export default addOnclickForDocument = function(func) {
       func();
     };
   }
-};
+}

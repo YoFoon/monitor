@@ -26,6 +26,8 @@ export const BROWSER_INFO = window.navigator.userAgent;
 export const TIMING = performance && performance.timing;
 // 监控平台地址
 export const WEB_MONITOR_IP = 'localhost:8011'; //'&&&www.webfunny.cn&&&'
+// 判断是http或是https的项目
+export const WEB_HTTP_TYPE = window.location.href.indexOf('https') === -1 ? 'http://' : 'https://';
 // 上传数据的uri 区分了本地和生产环境
 export const HTTP_UPLOAD_URI = WEB_HTTP_TYPE + WEB_MONITOR_IP;
 // 上传数据的接口API
