@@ -12,7 +12,7 @@ export default function(method, url, param, successCallback, failCallback) {
       ? new XMLHttpRequest()
       : new ActiveXObject('Microsoft.XMLHTTP');
     xmlHttp.open(method, url, true);
-    xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xmlHttp.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
     xmlHttp.onreadystatechange = function() {
       if (xmlHttp.readyState == 4) {
         var response = {};
@@ -28,7 +28,7 @@ export default function(method, url, param, successCallback, failCallback) {
       }
     };
     var resultStr = JSON.stringify(param || {});
-    xmlHttp.send('data=' + resultStr);
+    xmlHttp.send(resultStr);
   } catch (e) {
     console.warn(e);
   }

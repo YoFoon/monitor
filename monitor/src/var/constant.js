@@ -25,13 +25,13 @@ export const BROWSER_INFO = window.navigator.userAgent;
 // 页面加载对象属性
 export const TIMING = performance && performance.timing;
 // 监控平台地址
-export const WEB_MONITOR_IP = 'localhost:8011'; //'&&&www.webfunny.cn&&&'
+export const WEB_MONITOR_IP = '127.0.0.1:7001';
 // 判断是http或是https的项目
 export const WEB_HTTP_TYPE = window.location.href.indexOf('https') === -1 ? 'http://' : 'https://';
 // 上传数据的uri 区分了本地和生产环境
 export const HTTP_UPLOAD_URI = WEB_HTTP_TYPE + WEB_MONITOR_IP;
 // 上传数据的接口API
-export const HTTP_UPLOAD_LOG_API = '/server/upLog'; // '/api/v1/upLog'
+export const HTTP_UPLOAD_LOG_API = '/server/upLog';
 // 上传debug数据的接口API
 export const HTTP_UPLOAD_DEBUG_LOG_API = '/server/upDLog';
 // 上传数据时忽略的uri, 需要过滤掉上报接口

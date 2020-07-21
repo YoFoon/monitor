@@ -4,7 +4,7 @@ import b64EncodeUnicode from '../utils/b64EncodeUnicode';
 class HttpLogInfo extends MonitorBaseInfo {
   constructor(
     uploadType,
-    simpleUrl,
+    httpSimpleUrl,
     url,
     status,
     statusText,
@@ -15,7 +15,7 @@ class HttpLogInfo extends MonitorBaseInfo {
   ) {
     super();
     this.uploadType = uploadType; // 上传类型
-    this.simpleUrl = simpleUrl;
+    this.httpSimpleUrl = httpSimpleUrl;
     this.httpUrl = b64EncodeUnicode(encodeURIComponent(url)); // 请求地址
     this.status = status; // 接口状态
     this.statusText = statusText; // 状态描述

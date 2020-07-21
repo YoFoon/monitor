@@ -3,7 +3,6 @@ import { LOAD_PAGE, TIMING, RESOURCES } from './var/constant';
 import LoadPageInfo from './modules/loadPageInfo';
 monitor.extend({
   recordLoadPage: function() {
-    console.log('recordLoadPage');
     monitor.addLoadEvent(function() {
       setTimeout(function() {
         if (RESOURCES) {

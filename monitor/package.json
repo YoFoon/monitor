@@ -12,14 +12,11 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.3.0",
-    "rollup-plugin-uglify": "^6.0.4",
-    "webpack": "^4.11.1",
-    "webpack-cli": "^3.0.3"
+    "rollup-plugin-uglify": "^6.0.4"
   },
   "scripts": {
     "dev": "webpack -w",
-    "build": "webpack -p",
-    "rollup": "rollup -c"
+    "build": "rollup -c"
   },
   "keywords": [],
   "author": "",

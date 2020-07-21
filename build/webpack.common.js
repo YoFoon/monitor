@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const os = require('os');
 const HappyPack = require('happypack');
+const WardenPlugin = require('./wardenPlugin');
 
 const { join } = path;
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
@@ -89,6 +90,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: `${srcDir}/index.html`,
     }),
+    // new WardenPlugin({
+    //   timer: Date.now(),
+    // }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.json'],

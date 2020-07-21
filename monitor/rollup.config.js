@@ -19,7 +19,7 @@ export default {
   onwarn: onWarn,
   output: {
     file: './dist/monitor.js',
-    format: 'iife',
+    format: 'umd',
     name: 'monitor',
   },
   plugins: [

@@ -21,7 +21,7 @@ monitor.extend({
       setInterval(function() {
         monitor.checkUrlChange();
         // 进行一次上传
-        if (timeCount >= 40) {
+        if (timeCount >= 0) {
           // 如果是本地的localhost, 就忽略，不进行上传
           // if (window.location.href.indexOf("localhost") != -1) return;
           var logInfo = '';
@@ -38,12 +38,12 @@ monitor.extend({
             return;
           }
           waitTimes = 0;
-
+          console.log(logInfo)
           logInfo.length > 0 &&
             ajax(
               'POST',
               HTTP_UPLOAD_LOG_INFO,
-              { logInfo: logInfo },
+              { data: logInfo },
               function(res) {
                 for (var i = 0; i < typeList.length; i++) {
                   localStorage[typeList[i]] = '';

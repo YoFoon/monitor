@@ -22,8 +22,8 @@ class MonitorBaseInfo {
     // 用户自定义信息， 由开发者主动传入， 便于对线上问题进行准确定位
     var wmUserInfo = localStorage.wmUserInfo ? JSON.parse(localStorage.wmUserInfo) : {};
     this.userId = wmUserInfo.userId;
-    this.firstUserParam = b64EncodeUnicode(wmUserInfo.firstUserParam || '');
-    this.secondUserParam = b64EncodeUnicode(wmUserInfo.secondUserParam || '');
+    // this.firstUserParam = b64EncodeUnicode(wmUserInfo.firstUserParam || '');
+    // this.secondUserParam = b64EncodeUnicode(wmUserInfo.secondUserParam || '');
   }
 }
 
